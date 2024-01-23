@@ -46,7 +46,7 @@ We have used Jupiter Notebook of Anaconda to evaluate and build the model in pyt
 5. For saving models: pickle
 
 The data is looking like this,
-![Alt Text]()
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/Data.png)
 
 ## Data Exploration(Initial EDA, data cleaning and data visualization)
 Examining and visualizing data to understand its characteristics, uncover patterns, and identify potential insights.
@@ -57,11 +57,15 @@ Examining and visualizing data to understand its characteristics, uncover patter
 5. Bivariate Analysis
 
 ## Feature Engineering
-The correlation heatmap confirms that the number of projects, monthly hours, and evaluation scores and to some extend tenure all have some positive correlation with each other, and whether an employee leaves is negatively correlated with their satisfaction level.
 
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/Heatmap.png)
 
-## Encoding Categorical and Extracting Numerical variable from text
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/FE_vectorisation.png)
+
+## Data Visualization of Categorical and Numerical data
+
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/Viz_after_conversion.png)
+
+## Splitting the data into Train,Validation and Test
 
 
 
@@ -70,26 +74,32 @@ The correlation heatmap confirms that the number of projects, monthly hours, and
 Hypertune Parameters = 'max_depth': [5, 7,None], 'max_features': [0.3, 0.6], 'max_samples': [0.7], 'min_samples_leaf': [1,2], 'min_samples_split': [2,3],'n_estimators': [75,100,200]
              
 
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/RF.png)
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/RF_Val.png)
 
-## Cross-validated with grid-search
 
-![Alt Text]()
+On Test Data: 
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/RF_test.png)
+
 
 ## Built XGBoost GridSearch CV and Classification Report
 
 Hypertune Parameters = 'max_depth': [4,8,12], 'min_child_weight': [3, 5], 'learning_rate': [0.01, 0.1], 'n_estimators': [300, 500]
+
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/XGB_Val.png)
              
-The results of the XGBoost model were also nearly perfect. However, its errors tended to be false negatives. Identifying claims was the priority, so it's important that the model be good at capturing all actual claim videos. The random forest model has a better recall score, and is therefore the champion model.
+
+On Test data:
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/XGB_test.png)
+
 
 ## Final Results of XGBoost and Random Forest Tree based Model
 
-The evaluation scores of the random forest model are slightly better than those of the decision tree model, with the exception of recall (the recall score of the random forest model is approximately 0.001 lower, which is a negligible amount). This indicates that the random forest model mostly outperforms the decision tree model.
+The results of the XGBoost model were also nearly perfect. However, its errors tended to be false negatives. Identifying claims was the priority, so it's important that the model be good at capturing all actual claim videos. The random forest model has a better recall score, and is therefore the champion model.
 
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/Result_tb.png)
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/Results.png)
 
 ## Random forest feature importance
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/RF_FI.png)
+![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/FI.png)
 
 The plot above shows that in this random forest model, last_evaluation, number_project, tenure, and overworked have the highest importance, in that order. These variables are most helpful in predicting the outcome variable, left, and they are the same as the ones used by the decision tree model.
 
