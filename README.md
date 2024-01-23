@@ -66,14 +66,15 @@ Examining and visualizing data to understand its characteristics, uncover patter
 ![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/Viz_after_conversion.png)
 
 ## Splitting the data into Train,Validation and Test
-
-
+Split the training set into training and validation sets, 75/25, to result in a final ratio of 60/20/20 for train/validate/test sets.
+The number of features (11) aligns between the training and testing sets.
+The number of rows aligns between the features and the outcome variable for training (11,450) and both validation and testing data (3,817).
 
 ## Built Random Forest GridSearch CV Model and Classification Report
 
 Hypertune Parameters = 'max_depth': [5, 7,None], 'max_features': [0.3, 0.6], 'max_samples': [0.7], 'min_samples_leaf': [1,2], 'min_samples_split': [2,3],'n_estimators': [75,100,200]
              
-
+On Training Data:
 ![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/RF_Val.png)
 
 
