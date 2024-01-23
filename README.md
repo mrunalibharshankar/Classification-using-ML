@@ -102,30 +102,16 @@ The results of the XGBoost model were also nearly perfect. However, its errors t
 ## Random forest feature importance
 ![Alt Text](https://github.com/mrunalibharshankar/Classification-using-ML/blob/99494574f8239b83aea1bee4e9dc939c4a889027/FI.png)
 
-The plot above shows that in this random forest model, last_evaluation, number_project, tenure, and overworked have the highest importance, in that order. These variables are most helpful in predicting the outcome variable, left, and they are the same as the ones used by the decision tree model.
-
-
-
-The barplot above shows that in this decision tree model,satisfaction_level,tenure, last_evaluation, number_project, and average_monthly_hours have the highest importance, in that order. These variables are most helpful in predicting the outcome variable, left.
+The plot above shows that in this random forest model, video_view_count highest importance followed by video_like_count, video_shared_count.
 
 # Conclusion and Summary
+- One can recommend this model because it performed well on both the validation and test holdout data. Furthermore, both precision and F1 scores were consistently high. The model very successfully classified claims and opinions.
 
-1. Logistic Regression
+- The model's most predictive features were all related to the user engagement levels associated with each video. It was classifying videos based on how many views, likes, shares, and downloads they received.
 
-The logistic regression model achieved precision of 80%, recall of 83%, f1-score of 80% (all weighted averages), and accuracy of 83%, on the test set.
+- The model currently performs nearly perfectly, there is no need to engineer any new features.
 
-2. Tree-based Machine Learning
-
-The decision tree model achieved AUC of 95.65%, precision of 97.59%, recall of 90.4%, f1-score of 94.58%, and accuracy of 98.23%, on the test set. The random forest modestly outperformed the decision tree model.
-
-**To retain employees, the following recommendations could be presented to the stakeholders:**
-- Cap the number of projects that employees can work on.
-- Consider promoting employees who have been with the company for atleast four years, or conduct further investigation about why four-year tenured employees are so dissatisfied.
-- Either reward employees for working longer hours, or don't require them to do so.
-- If employees aren't familiar with the company's overtime pay policies, inform them about this. If the expectations around workload and time off aren't explicit, make them clear.
-- Hold company-wide and within-team discussions to understand and address the company work culture, across the board and in specific contexts.
-- High evaluation scores should not be reserved for employees who work 200+ hours per month. Consider a proportionate scale for rewarding employees who contribute more/put in more 
-  effort.
+- The current version of the model does not need any new features. However, it would be helpful to have the number of times the video was reported. It would also be useful to have the total number of user reports for all videos posted by each author.
 
 
   
