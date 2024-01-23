@@ -21,18 +21,19 @@ Because it's more important to minimize false negatives, the model evaluation me
 
 
 ## Dataset 
-The data file has 10 columns with names:
-1. claim_status
-2. video_id 
-3. video_duration_sec
-4. video_transcription_text 
-5. verified_status  
-6. author_ban_status     
-7. video_view_count          
-8. video_like_count
-9. video_share_count
-10. video_download_count 
-11. video_comment_count  
+The data file has 12 columns with names:
+1. number(#)
+2. claim_status
+3. video_id 
+4. video_duration_sec
+5. video_transcription_text 
+6. verified_status  
+7. author_ban_status     
+8. video_view_count          
+9. video_like_count
+10. video_share_count
+11. video_download_count 
+12. video_comment_count  
 
 The original files were exported from the [Kaggle](https://www.kaggle.com/datasets/mrunalibharshankar/hr-employee-retention#:~:text=HR_capstone_dataset.-,csv,-Summary), and is available in this repository as an [.CSV file](https://github.com/mrunalibharshankar/Python/blob/98905f38ef3704a651371c66b1cb6c6f71452c46/HR_capstone_dataset.csv) document.
 
